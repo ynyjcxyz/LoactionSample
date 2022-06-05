@@ -7,7 +7,9 @@ import android.app.Service;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.location.Address;
 import android.location.Criteria;
+import android.location.Geocoder;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
@@ -15,12 +17,12 @@ import android.os.Bundle;
 import android.provider.Settings;
 import android.util.Log;
 import android.widget.TextView;
-
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-
-import java.text.DateFormat;
+import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
+import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity implements LocationListener {
     final String TAG = "GPS";
@@ -28,7 +30,7 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
     private static final long MIN_DISTANCE_CHANGE_FOR_UPDATES = 10;
     private static final long MIN_TIME_BW_UPDATES = 1000 * 60;
 
-    TextView tvLatitude, tvLongitude, tvTime;
+    TextView tvLatitude, tvLongitude, tvAddress;
     LocationManager locationManager;
     Location loc;
     ArrayList<String> permissions = new ArrayList<>();
@@ -49,7 +51,7 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
     private void locationFunction() {
         tvLatitude = findViewById(R.id.tvLatitude);
         tvLongitude = findViewById(R.id.tvLongitude);
-        tvTime = findViewById(R.id.tvTime);
+        tvAddress = findViewById(R.id.tvTime);
 
         locationManager = (LocationManager) getSystemService(Service.LOCATION_SERVICE);
         isGPS = locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER);
@@ -228,9 +230,20 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
     private void updateLocation(Location loc) {
         Log.d(TAG, "updateLocation");
 //        System.out.println(loc.getLatitude() + "," + loc.getLongitude());
-        tvLatitude.setText(Double.toString(loc.getLatitude()));
-        tvLongitude.setText(Double.toString(loc.getLongitude()));
-        tvTime.setText(DateFormat.getTimeInstance().format(loc.getTime()));
+        tvLatitude.setText("Latitude: " + loc.getLatitude());
+        tvLongitude.setText("Longitude: " + loc.getLongitude());
+
+        Geocoder geocoder = new Geocoder(this, Locale.getDefault());
+        List<Address> addresses = null;
+        try {
+            addresses = geocoder.getFromLocation(loc.getLatitude(), loc.getLongitude(), 1);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        assert addresses != null;
+        String addressLine = addresses.get(0).getAddressLine(0);
+
+        tvAddress.setText("Address: " + addressLine);
     }
 
     @Override

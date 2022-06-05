@@ -5,23 +5,9 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:text="Latitude:"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textStyle="bold"/>
-
-    <TextView
         android:id="@+id/tvLatitude"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
-
-    <TextView
-        android:text="Longitude:"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textStyle="bold"/>
 
     <TextView
         android:id="@+id/tvLongitude"
@@ -29,14 +15,16 @@
         android:layout_height="wrap_content" />
 
     <TextView
-        android:text="Time of request:"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textStyle="bold"/>
-
-    <TextView
         android:id="@+id/tvTime"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerviewList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:drawSelectorOnTop="true"
+        android:orientation="vertical"
+        android:padding="16dp" />
+
 </LinearLayout>
