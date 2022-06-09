@@ -7,6 +7,10 @@
         <entry key="..\:/AndroidSample/LoactionSample/app/src/main/res/layout/detail_page.xml" value="0.1" />
         <entry key="..\:/AndroidSample/LoactionSample/app/src/main/res/layout/list_item.xml" value="0.22" />
         <entry key="..\:/Android_Interface/LoactionSample/app/src/main/res/layout/activity_main.xml" value="0.3282959874934862" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/detail_page.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/list_item.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/photo_list_item.xml" value="0.25" />
       </map>
     </option>
   </component>
