@@ -1,5 +1,8 @@
 package com.example.android.loactionsample;
 
+import static com.uber.autodispose.AutoDispose.autoDisposable;
+import static com.uber.autodispose.android.lifecycle.AndroidLifecycleScopeProvider.from;
+
 import android.Manifest;
 import android.annotation.SuppressLint;
 import android.app.AlertDialog;
@@ -19,10 +22,22 @@ import android.util.Log;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.android.loactionsample.datamodel_main.MainResult;
+import com.example.android.loactionsample.datamodel_main.MainResultUnit;
+import com.example.android.loactionsample.recyclerview.MainResultListRecyclerViewAdapter;
+import com.example.android.loactionsample.retrofit.MainResultRepository;
+import com.example.android.loactionsample.util.AppConstants;
+
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
+
+import io.reactivex.android.schedulers.AndroidSchedulers;
+import io.reactivex.schedulers.Schedulers;
 
 public class MainActivity extends AppCompatActivity implements LocationListener {
     final String TAG = "GPS";
@@ -31,6 +46,9 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
     private static final long MIN_TIME_BW_UPDATES = 1000 * 60;
 
     TextView tvLatitude, tvLongitude, tvAddress;
+    RecyclerView recyclerviewList;
+    private MainResultListRecyclerViewAdapter recyclerAdapter;
+    private List<MainResultUnit> resultList;
     LocationManager locationManager;
     Location loc;
     ArrayList<String> permissions = new ArrayList<>();
@@ -45,14 +63,23 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
         super.onCreate(bundle);
         setContentView(R.layout.activity_main);
 
-        locationFunction();
-    }
+        setView();
+        getLocationAndData();
+     }
 
-    private void locationFunction() {
+    private void setView() {
         tvLatitude = findViewById(R.id.tvLatitude);
         tvLongitude = findViewById(R.id.tvLongitude);
-        tvAddress = findViewById(R.id.tvTime);
+        tvAddress = findViewById(R.id.tvAddress);
 
+        recyclerviewList = findViewById(R.id.recyclerviewList);
+        recyclerviewList.setHasFixedSize(true);
+        recyclerviewList.setLayoutManager(new LinearLayoutManager(this));
+        recyclerAdapter = new MainResultListRecyclerViewAdapter(resultList);
+        recyclerviewList.setAdapter(recyclerAdapter);
+    }
+
+    private void getLocationAndData() {
         locationManager = (LocationManager) getSystemService(Service.LOCATION_SERVICE);
         isGPS = locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER);
         isNetwork = locationManager.isProviderEnabled(LocationManager.NETWORK_PROVIDER);
@@ -226,6 +253,14 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
                 .show();
     }
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        if (locationManager != null) {
+            locationManager.removeUpdates(this);
+        }
+    }
+
     @SuppressLint("SetTextI18n")
     private void updateLocation(Location loc) {
         Log.d(TAG, "updateLocation");
@@ -244,13 +279,30 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
         String addressLine = addresses.get(0).getAddressLine(0);
 
         tvAddress.setText("Address: " + addressLine);
+
+        getMainResult(loc);
     }
 
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        if (locationManager != null) {
-            locationManager.removeUpdates(this);
-        }
+    private void getMainResult(Location loc) {
+        MainResultRepository
+                .getMainResult(AppConstants.keyword,
+                        loc.getLatitude(),
+                        loc.getLongitude(),
+                        AppConstants.view,
+                        AppConstants.relatedPois,
+                        AppConstants.key)
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .as(autoDisposable(from(this)))
+                .subscribe(this::onSuccess, this::onError);
+    }
+
+    private void onSuccess(MainResult mainResult) {
+        resultList = mainResult.resultList();
+        recyclerAdapter.setResultList(resultList);
+    }
+
+    private void onError(Throwable throwable) {
+        Log.d("TAG", "Failed! Response = " + throwable);
     }
 }

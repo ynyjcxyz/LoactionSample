@@ -1,0 +1,821 @@
+// 20220606092134
+// https://api.tomtom.com/search/2/poiSearch/bike%shop.json?lat=37.337&lon=-121.89&view=Unified&relatedPois=off&key=EKJAdAiCT7KLa5nZZz1p0jnn0jIJGyMZ
+
+{
+  "summary": {
+    "query": "bike shop",
+    "queryType": "NON_NEAR",
+    "queryTime": 87,
+    "numResults": 10,
+    "offset": 0,
+    "totalResults": 58221,
+    "fuzzyLevel": 1,
+    "geoBias": {
+      "lat": 37.337,
+      "lon": -121.89
+    }
+  },
+  "results": [
+    {
+      "type": "POI",
+      "id": "840069006246566",
+      "score": 5.2203416824,
+      "dist": 5444.388187725381,
+      "info": "search:ta:840069006246566-US",
+      "poi": {
+        "name": "Sun Bike Shop",
+        "phone": "+1 408-262-4360",
+        "categorySet": [
+          {
+            "id": 9361039
+          }
+        ],
+        "url": "www.sunbikeshop.com",
+        "categories": [
+          "shop",
+          "sports equipment clothing"
+        ],
+        "classifications": [
+          {
+            "code": "SHOP",
+            "names": [
+              {
+                "nameLocale": "en-US",
+                "name": "shop"
+              },
+              {
+                "nameLocale": "en-US",
+                "name": "sports equipment clothing"
+              }
+            ]
+          }
+        ]
+      },
+      "address": {
+        "streetNumber": "2646",
+        "streetName": "Alum Rock Avenue",
+        "municipalitySubdivision": "Sierra",
+        "municipality": "San Jose",
+        "countrySecondarySubdivision": "Santa Clara",
+        "countrySubdivision": "CA",
+        "countrySubdivisionName": "California",
+        "postalCode": "95116",
+        "extendedPostalCode": "95116-2621",
+        "countryCode": "US",
+        "country": "United States",
+        "countryCodeISO3": "USA",
+        "freeformAddress": "2646 Alum Rock Avenue, San Jose, CA 95116",
+        "localName": "San Jose"
+      },
+      "position": {
+        "lat": 37.36155,
+        "lon": -121.83671
+      },
+      "viewport": {
+        "topLeftPoint": {
+          "lat": 37.36245,
+          "lon": -121.83784
+        },
+        "btmRightPoint": {
+          "lat": 37.36065,
+          "lon": -121.83558
+        }
+      },
+      "entryPoints": [
+        {
+          "type": "main",
+          "position": {
+            "lat": 37.36163,
+            "lon": -121.83675
+          }
+        }
+      ]
+    },
+    {
+      "type": "POI",
+      "id": "840069019315982",
+      "score": 5.1996936798,
+      "dist": 7884.39732955476,
+      "info": "search:ta:840069019315982-US",
+      "poi": {
+        "name": "Sun Bike Shop",
+        "phone": "+1 408-262-4360",
+        "categorySet": [
+          {
+            "id": 9361039
+          }
+        ],
+        "url": "Sunbikeshop.com",
+        "categories": [
+          "shop",
+          "sports equipment clothing"
+        ],
+        "classifications": [
+          {
+            "code": "SHOP",
+            "names": [
+              {
+                "nameLocale": "en-US",
+                "name": "shop"
+              },
+              {
+                "nameLocale": "en-US",
+                "name": "sports equipment clothing"
+              }
+            ]
+          }
+        ]
+      },
+      "address": {
+        "streetNumber": "1624",
+        "streetName": "South Main Street",
+        "municipalitySubdivision": "Milpitas-Southwestern",
+        "municipality": "Milpitas",
+        "countrySecondarySubdivision": "Santa Clara",
+        "countrySubdivision": "CA",
+        "countrySubdivisionName": "California",
+        "postalCode": "95035",
+        "extendedPostalCode": "95035-6249",
+        "countryCode": "US",
+        "country": "United States",
+        "countryCodeISO3": "USA",
+        "freeformAddress": "1624 South Main Street, Milpitas, CA 95035",
+        "localName": "Milpitas"
+      },
+      "position": {
+        "lat": 37.40724,
+        "lon": -121.9022
+      },
+      "viewport": {
+        "topLeftPoint": {
+          "lat": 37.40814,
+          "lon": -121.90333
+        },
+        "btmRightPoint": {
+          "lat": 37.40634,
+          "lon": -121.90107
+        }
+      },
+      "entryPoints": [
+        {
+          "type": "main",
+          "position": {
+            "lat": 37.40725,
+            "lon": -121.90288
+          }
+        }
+      ],
+      "dataSources": {
+        "poiDetails": [
+          {
+            "id": "Rm91cnNxdWFyZTo0YWYxYzY4OGY5NjRhNTIwMGRlMzIxZTM=",
+            "sourceName": "Foursquare"
+          }
+        ]
+      }
+    },
+    {
+      "type": "POI",
+      "id": "840069000236397",
+      "score": 5.1581263542,
+      "dist": 11408.519751406868,
+      "info": "search:ta:840069000236397-US",
+      "poi": {
+        "name": "Evolution Bike Shop",
+        "phone": "+1 408-252-5202",
+        "categorySet": [
+          {
+            "id": 9361039
+          }
+        ],
+        "url": "Evolutionbikeshop.com",
+        "categories": [
+          "shop",
+          "sports equipment clothing"
+        ],
+        "classifications": [
+          {
+            "code": "SHOP",
+            "names": [
+              {
+                "nameLocale": "en-US",
+                "name": "shop"
+              },
+              {
+                "nameLocale": "en-US",
+                "name": "sports equipment clothing"
+              }
+            ]
+          }
+        ]
+      },
+      "address": {
+        "streetNumber": "19685",
+        "streetName": "Stevens Creek Boulevard",
+        "municipalitySubdivision": "City Center Cupertino",
+        "municipality": "Cupertino",
+        "countrySecondarySubdivision": "Santa Clara",
+        "countrySubdivision": "CA",
+        "countrySubdivisionName": "California",
+        "postalCode": "95014",
+        "extendedPostalCode": "95014-2405",
+        "countryCode": "US",
+        "country": "United States",
+        "countryCodeISO3": "USA",
+        "freeformAddress": "19685 Stevens Creek Boulevard, Cupertino, CA 95014",
+        "localName": "Cupertino"
+      },
+      "position": {
+        "lat": 37.32387,
+        "lon": -122.01797
+      },
+      "viewport": {
+        "topLeftPoint": {
+          "lat": 37.32477,
+          "lon": -122.0191
+        },
+        "btmRightPoint": {
+          "lat": 37.32297,
+          "lon": -122.01684
+        }
+      },
+      "entryPoints": [
+        {
+          "type": "main",
+          "position": {
+            "lat": 37.32302,
+            "lon": -122.01796
+          }
+        }
+      ],
+      "dataSources": {
+        "poiDetails": [
+          {
+            "id": "Rm91cnNxdWFyZTo0YjgwNmUyMWY5NjRhNTIwYTA3MTMwZTM=",
+            "sourceName": "Foursquare"
+          }
+        ]
+      }
+    },
+    {
+      "type": "POI",
+      "id": "840069003127428",
+      "score": 5.085808754,
+      "dist": 16044.454323703163,
+      "info": "search:ta:840069003127428-US",
+      "poi": {
+        "name": "Cupertino Bike Shop",
+        "phone": "+1 408-255-2217",
+        "categorySet": [
+          {
+            "id": 9361039
+          }
+        ],
+        "url": "https://www.cupertinobikeshop.com",
+        "categories": [
+          "shop",
+          "sports equipment clothing"
+        ],
+        "classifications": [
+          {
+            "code": "SHOP",
+            "names": [
+              {
+                "nameLocale": "en-US",
+                "name": "shop"
+              },
+              {
+                "nameLocale": "en-US",
+                "name": "sports equipment clothing"
+              }
+            ]
+          }
+        ]
+      },
+      "address": {
+        "streetNumber": "10625",
+        "streetName": "South Foothill Boulevard",
+        "municipalitySubdivision": "Monta Vista",
+        "municipality": "Cupertino",
+        "countrySecondarySubdivision": "Santa Clara",
+        "countrySubdivision": "CA",
+        "countrySubdivisionName": "California",
+        "postalCode": "95014",
+        "extendedPostalCode": "95014-3963",
+        "countryCode": "US",
+        "country": "United States",
+        "countryCodeISO3": "USA",
+        "freeformAddress": "10625 South Foothill Boulevard, Cupertino, CA 95014",
+        "localName": "Cupertino"
+      },
+      "position": {
+        "lat": 37.3137,
+        "lon": -122.06907
+      },
+      "viewport": {
+        "topLeftPoint": {
+          "lat": 37.3146,
+          "lon": -122.0702
+        },
+        "btmRightPoint": {
+          "lat": 37.3128,
+          "lon": -122.06794
+        }
+      },
+      "entryPoints": [
+        {
+          "type": "main",
+          "position": {
+            "lat": 37.31402,
+            "lon": -122.06858
+          }
+        }
+      ],
+      "dataSources": {
+        "poiDetails": [
+          {
+            "id": "Rm91cnNxdWFyZTo1MzViZjJlNzQ5OGVlYWNiNDQyMjYwN2E=",
+            "sourceName": "Foursquare"
+          }
+        ]
+      }
+    },
+    {
+      "type": "POI",
+      "id": "840069021342798",
+      "score": 4.9818968773,
+      "dist": 19083.673498464,
+      "info": "search:ta:840069021342798-US",
+      "poi": {
+        "name": "Google Visitor Bike Shop",
+        "categorySet": [
+          {
+            "id": 9361039
+          }
+        ],
+        "categories": [
+          "shop",
+          "sports equipment clothing"
+        ],
+        "classifications": [
+          {
+            "code": "SHOP",
+            "names": [
+              {
+                "nameLocale": "en-US",
+                "name": "shop"
+              },
+              {
+                "nameLocale": "en-US",
+                "name": "sports equipment clothing"
+              }
+            ]
+          }
+        ]
+      },
+      "address": {
+        "streetName": "Charleston Road",
+        "municipality": "Mountain View",
+        "countrySecondarySubdivision": "Santa Clara",
+        "countrySubdivision": "CA",
+        "countrySubdivisionName": "California",
+        "postalCode": "94043",
+        "countryCode": "US",
+        "country": "United States",
+        "countryCodeISO3": "USA",
+        "freeformAddress": "Charleston Road, Mountain View, CA 94043",
+        "localName": "Mountain View"
+      },
+      "position": {
+        "lat": 37.4209,
+        "lon": -122.07841
+      },
+      "viewport": {
+        "topLeftPoint": {
+          "lat": 37.4218,
+          "lon": -122.07954
+        },
+        "btmRightPoint": {
+          "lat": 37.42,
+          "lon": -122.07728
+        }
+      },
+      "entryPoints": [
+        {
+          "type": "main",
+          "position": {
+            "lat": 37.42061,
+            "lon": -122.07843
+          }
+        }
+      ],
+      "dataSources": {
+        "poiDetails": [
+          {
+            "id": "Rm91cnNxdWFyZTo1MzhlMmMyMjQ5OGUzOTEzODc0NTljNGU=",
+            "sourceName": "Foursquare"
+          }
+        ]
+      }
+    },
+    {
+      "type": "POI",
+      "id": "840069015669603",
+      "score": 4.9140515327,
+      "dist": 24897.312304177914,
+      "info": "search:ta:840069015669603-US",
+      "poi": {
+        "name": "College Bike Shop",
+        "phone": "+1 650-485-2743",
+        "categorySet": [
+          {
+            "id": 9361039
+          }
+        ],
+        "categories": [
+          "shop",
+          "sports equipment clothing"
+        ],
+        "classifications": [
+          {
+            "code": "SHOP",
+            "names": [
+              {
+                "nameLocale": "en-US",
+                "name": "shop"
+              },
+              {
+                "nameLocale": "en-US",
+                "name": "sports equipment clothing"
+              }
+            ]
+          }
+        ]
+      },
+      "address": {
+        "streetNumber": "2123",
+        "streetName": "El Camino Real",
+        "municipalitySubdivision": "Evergreen Park",
+        "municipality": "Palo Alto",
+        "countrySecondarySubdivision": "Santa Clara",
+        "countrySubdivision": "CA",
+        "countrySubdivisionName": "California",
+        "postalCode": "94306",
+        "extendedPostalCode": "94306-1540",
+        "countryCode": "US",
+        "country": "United States",
+        "countryCodeISO3": "USA",
+        "freeformAddress": "2123 El Camino Real, Palo Alto, CA 94306",
+        "localName": "Palo Alto"
+      },
+      "position": {
+        "lat": 37.42696,
+        "lon": -122.14804
+      },
+      "viewport": {
+        "topLeftPoint": {
+          "lat": 37.42786,
+          "lon": -122.14917
+        },
+        "btmRightPoint": {
+          "lat": 37.42606,
+          "lon": -122.14691
+        }
+      },
+      "entryPoints": [
+        {
+          "type": "main",
+          "position": {
+            "lat": 37.42689,
+            "lon": -122.14812
+          }
+        }
+      ]
+    },
+    {
+      "type": "POI",
+      "id": "840069001180150",
+      "score": 4.8779816628,
+      "dist": 26653.328158180117,
+      "info": "search:ta:840069001180150-US",
+      "poi": {
+        "name": "Campus Bike Shop",
+        "phone": "+1 650-723-9300",
+        "categorySet": [
+          {
+            "id": 9361039
+          }
+        ],
+        "url": "www.campusbike.com",
+        "categories": [
+          "shop",
+          "sports equipment clothing"
+        ],
+        "classifications": [
+          {
+            "code": "SHOP",
+            "names": [
+              {
+                "nameLocale": "en-US",
+                "name": "shop"
+              },
+              {
+                "nameLocale": "en-US",
+                "name": "sports equipment clothing"
+              }
+            ]
+          }
+        ]
+      },
+      "address": {
+        "streetNumber": "459",
+        "streetName": "Lagunita Drive",
+        "municipality": "Stanford",
+        "countrySecondarySubdivision": "Santa Clara",
+        "countrySubdivision": "CA",
+        "countrySubdivisionName": "California",
+        "postalCode": "94305",
+        "extendedPostalCode": "94305-3010",
+        "countryCode": "US",
+        "country": "United States",
+        "countryCodeISO3": "USA",
+        "freeformAddress": "459 Lagunita Drive, Stanford, CA 94305",
+        "localName": "Stanford"
+      },
+      "position": {
+        "lat": 37.42437,
+        "lon": -122.1709
+      },
+      "viewport": {
+        "topLeftPoint": {
+          "lat": 37.42527,
+          "lon": -122.17203
+        },
+        "btmRightPoint": {
+          "lat": 37.42347,
+          "lon": -122.16977
+        }
+      },
+      "entryPoints": [
+        {
+          "type": "main",
+          "position": {
+            "lat": 37.42359,
+            "lon": -122.17114
+          }
+        },
+        {
+          "type": "main",
+          "position": {
+            "lat": 37.42359,
+            "lon": -122.1712
+          }
+        }
+      ],
+      "dataSources": {
+        "poiDetails": [
+          {
+            "id": "Rm91cnNxdWFyZTo0YmUyNTAwMDJmYzdkMTNhYzE1ZDA4M2E=",
+            "sourceName": "Foursquare"
+          }
+        ]
+      }
+    },
+    {
+      "type": "POI",
+      "id": "840069020953420",
+      "score": 4.8268270493,
+      "dist": 29161.208508452535,
+      "info": "search:ta:840069020953420-US",
+      "poi": {
+        "name": "Papi's Bike Shop",
+        "categorySet": [
+          {
+            "id": 9361039
+          }
+        ],
+        "categories": [
+          "shop",
+          "sports equipment clothing"
+        ],
+        "classifications": [
+          {
+            "code": "SHOP",
+            "names": [
+              {
+                "nameLocale": "en-US",
+                "name": "shop"
+              },
+              {
+                "nameLocale": "en-US",
+                "name": "sports equipment clothing"
+              }
+            ]
+          }
+        ]
+      },
+      "address": {
+        "streetName": "Adams Court",
+        "municipality": "Morgan Hill",
+        "countrySecondarySubdivision": "Santa Clara",
+        "countrySubdivision": "CA",
+        "countrySubdivisionName": "California",
+        "postalCode": "95037",
+        "extendedPostalCode": "95037-2280",
+        "countryCode": "US",
+        "country": "United States",
+        "countryCodeISO3": "USA",
+        "freeformAddress": "Adams Court, Morgan Hill, CA 95037",
+        "localName": "Morgan Hill"
+      },
+      "position": {
+        "lat": 37.14825,
+        "lon": -121.66129
+      },
+      "viewport": {
+        "topLeftPoint": {
+          "lat": 37.14915,
+          "lon": -121.66242
+        },
+        "btmRightPoint": {
+          "lat": 37.14735,
+          "lon": -121.66016
+        }
+      },
+      "entryPoints": [
+        {
+          "type": "main",
+          "position": {
+            "lat": 37.14848,
+            "lon": -121.66107
+          }
+        }
+      ],
+      "dataSources": {
+        "poiDetails": [
+          {
+            "id": "Rm91cnNxdWFyZTo0ZmUwY2E3MGU0YjBmNzUyNTg2NjI0OTc=",
+            "sourceName": "Foursquare"
+          }
+        ]
+      }
+    },
+    {
+      "type": "POI",
+      "id": "840069021252634",
+      "score": 4.8238606453,
+      "dist": 4059.014991047022,
+      "info": "search:ta:840069021252634-US",
+      "poi": {
+        "name": "Bike Teacher",
+        "phone": "+1 408-210-2980",
+        "categorySet": [
+          {
+            "id": 9361039
+          }
+        ],
+        "url": "www.biketeacher.com/contact/",
+        "categories": [
+          "shop",
+          "sports equipment clothing"
+        ],
+        "classifications": [
+          {
+            "code": "SHOP",
+            "names": [
+              {
+                "nameLocale": "en-US",
+                "name": "shop"
+              },
+              {
+                "nameLocale": "en-US",
+                "name": "sports equipment clothing"
+              }
+            ]
+          }
+        ]
+      },
+      "address": {
+        "streetNumber": "923",
+        "streetName": "Pine Avenue",
+        "municipalitySubdivision": "Willow Glen",
+        "municipality": "San Jose",
+        "countrySecondarySubdivision": "Santa Clara",
+        "countrySubdivision": "CA",
+        "countrySubdivisionName": "California",
+        "postalCode": "95125",
+        "extendedPostalCode": "95125-2550",
+        "countryCode": "US",
+        "country": "United States",
+        "countryCodeISO3": "USA",
+        "freeformAddress": "923 Pine Avenue, San Jose, CA 95125",
+        "localName": "San Jose"
+      },
+      "position": {
+        "lat": 37.3005,
+        "lon": -121.88936
+      },
+      "viewport": {
+        "topLeftPoint": {
+          "lat": 37.3014,
+          "lon": -121.89049
+        },
+        "btmRightPoint": {
+          "lat": 37.2996,
+          "lon": -121.88823
+        }
+      },
+      "entryPoints": [
+        {
+          "type": "main",
+          "position": {
+            "lat": 37.30026,
+            "lon": -121.88919
+          }
+        }
+      ],
+      "dataSources": {
+        "poiDetails": [
+          {
+            "id": "Rm91cnNxdWFyZTo1N2QwZWE0YjQ5OGU2NGI0YzVhMDBmZmQ=",
+            "sourceName": "Foursquare"
+          }
+        ]
+      }
+    },
+    {
+      "type": "POI",
+      "id": "840069000973939",
+      "score": 4.8075985909,
+      "dist": 2171.687658063533,
+      "info": "search:ta:840069000973939-US",
+      "poi": {
+        "name": "Good Karma Bikes",
+        "phone": "+1 408-291-0501",
+        "categorySet": [
+          {
+            "id": 9361039
+          }
+        ],
+        "url": "www.goodkarmabikes.org",
+        "categories": [
+          "shop",
+          "sports equipment clothing"
+        ],
+        "classifications": [
+          {
+            "code": "SHOP",
+            "names": [
+              {
+                "nameLocale": "en-US",
+                "name": "shop"
+              },
+              {
+                "nameLocale": "en-US",
+                "name": "sports equipment clothing"
+              }
+            ]
+          }
+        ]
+      },
+      "address": {
+        "streetNumber": "345",
+        "streetName": "Sunol Street",
+        "municipality": "San Jose",
+        "countrySecondarySubdivision": "Santa Clara",
+        "countrySubdivision": "CA",
+        "countrySubdivisionName": "California",
+        "postalCode": "95126",
+        "extendedPostalCode": "95126-4373",
+        "countryCode": "US",
+        "country": "United States",
+        "countryCodeISO3": "USA",
+        "freeformAddress": "345 Sunol Street, San Jose, CA 95126",
+        "localName": "San Jose"
+      },
+      "position": {
+        "lat": 37.32232,
+        "lon": -121.9062
+      },
+      "viewport": {
+        "topLeftPoint": {
+          "lat": 37.32322,
+          "lon": -121.90733
+        },
+        "btmRightPoint": {
+          "lat": 37.32142,
+          "lon": -121.90507
+        }
+      },
+      "entryPoints": [
+        {
+          "type": "main",
+          "position": {
+            "lat": 37.32234,
+            "lon": -121.90594
+          }
+        }
+      ]
+    }
+  ]
+}

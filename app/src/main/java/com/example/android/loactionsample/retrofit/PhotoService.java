@@ -1,4 +1,4 @@
-package com.example.android.loactionsample;
+package com.example.android.loactionsample.retrofit;
 
 import com.example.android.loactionsample.datamodel_photo.PhotoResult;
 import io.reactivex.Observable;
