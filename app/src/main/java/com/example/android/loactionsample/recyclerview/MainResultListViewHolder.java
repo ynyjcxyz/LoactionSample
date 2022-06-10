@@ -3,7 +3,6 @@ package com.example.android.loactionsample.recyclerview;
 import static android.widget.Toast.LENGTH_SHORT;
 import static com.uber.autodispose.AutoDispose.autoDisposable;
 import static com.uber.autodispose.android.lifecycle.AndroidLifecycleScopeProvider.from;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -22,8 +21,6 @@ import com.example.android.loactionsample.datamodel_photo.PhotoResult;
 import com.example.android.loactionsample.datamodel_photo.PhotoUnit;
 import com.example.android.loactionsample.retrofit.PhotoRepository;
 import com.example.android.loactionsample.util.AppConstants;
-
-import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import io.reactivex.android.schedulers.AndroidSchedulers;
@@ -65,14 +62,14 @@ public class MainResultListViewHolder extends RecyclerView.ViewHolder{
 
     private void onSuccess(PhotoResult photoResult) {
         photoList = photoResult.photoInfo().photoList();
-        ArrayList<PhotoUnit> transList = new ArrayList<>(photoList);
-
         Glide.with(itemView.getContext())
                 .load(AppConstants.baseUrl +
                         "search/2/poiPhoto?key=" +
                         AppConstants.key + "&id=" +
                         photoList.get(0).id())
+                .error(R.drawable.image_error)
                 .into(location_photo);
+
         parent_layout.setOnClickListener(view -> {
             Intent intent = new Intent(itemView.getContext(), DetailPage.class);
             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);  //Important
@@ -81,10 +78,11 @@ public class MainResultListViewHolder extends RecyclerView.ViewHolder{
             intent.putExtra("url", url);
             intent.putExtra("location_address", location_address);
 
+            ArrayList<PhotoUnit> transList = new ArrayList<>(photoList);
             Bundle bundle = new Bundle();
-            bundle.putSerializable("photoList",(Serializable)transList);
-            intent.putExtras(bundle);
+            bundle.putSerializable("photoList", transList);
 
+            intent.putExtras(bundle);
             itemView.getContext().startActivity(intent);
         });
     }

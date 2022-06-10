@@ -64,7 +64,8 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
         setContentView(R.layout.activity_main);
 
         setView();
-        getLocationAndData();
+        getLocationData();
+        getMainResult(loc);
      }
 
     private void setView() {
@@ -79,7 +80,7 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
         recyclerviewList.setAdapter(recyclerAdapter);
     }
 
-    private void getLocationAndData() {
+    private void getLocationData() {
         locationManager = (LocationManager) getSystemService(Service.LOCATION_SERVICE);
         isGPS = locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER);
         isNetwork = locationManager.isProviderEnabled(LocationManager.NETWORK_PROVIDER);
@@ -190,7 +191,6 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
                 result.add(perm);
             }
         }
-
         return result;
     }
 
@@ -262,16 +262,16 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
     }
 
     @SuppressLint("SetTextI18n")
-    private void updateLocation(Location loc) {
+    private void updateLocation(Location location) {
         Log.d(TAG, "updateLocation");
 //        System.out.println(loc.getLatitude() + "," + loc.getLongitude());
-        tvLatitude.setText("Latitude: " + loc.getLatitude());
-        tvLongitude.setText("Longitude: " + loc.getLongitude());
+        tvLatitude.setText("Latitude: " + location.getLatitude());
+        tvLongitude.setText("Longitude: " + location.getLongitude());
 
         Geocoder geocoder = new Geocoder(this, Locale.getDefault());
         List<Address> addresses = null;
         try {
-            addresses = geocoder.getFromLocation(loc.getLatitude(), loc.getLongitude(), 1);
+            addresses = geocoder.getFromLocation(location.getLatitude(), location.getLongitude(), 1);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -279,8 +279,6 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
         String addressLine = addresses.get(0).getAddressLine(0);
 
         tvAddress.setText("Address: " + addressLine);
-
-        getMainResult(loc);
     }
 
     private void getMainResult(Location loc) {
@@ -295,6 +293,13 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
                 .observeOn(AndroidSchedulers.mainThread())
                 .as(autoDisposable(from(this)))
                 .subscribe(this::onSuccess, this::onError);
+
+/*        MainResultRepository
+                .getResult("42da2edf-ff7a-42ce-b9aa-b0ecdec25865")
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .as(autoDisposable(from(this)))
+                .subscribe(this::onSuccess,this::onError);*/
     }
 
     private void onSuccess(MainResult mainResult) {
